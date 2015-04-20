@@ -34,11 +34,12 @@
         return defer.promise;
       }
 
-      function save(advertiser){
+      function save(advertiser) {
         var defer = $q.defer();
 
         $timeout(function (){
           $log.info('The advertiser was successfully saved: ', advertiser);
+          defer.resolve(advertiser);
         }, 1000);
 
         return defer.promise;
