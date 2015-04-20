@@ -17,7 +17,7 @@
       <tr ng-repeat="advertiser in advertisers | filter:search" >
         <td>{{ advertiser.name }}</td>
         <td>{{ advertiser.managedBy }}</td>
-        <td>{{ advertiser.createdOn | date:'short' }}</td>
+        <td>{{ advertiser.createdOn | date:'shortDate' }}</td>
         <td><a ng-href="#/advertiser/{{advertiser.id}}/edit"/>Edit</a> </td>
       </tr>
     </table>
