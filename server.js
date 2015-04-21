@@ -6,7 +6,7 @@ var fs = require('fs'),
 app.use(express.static('public'));
 
 app.get('/advertisers', function (req, res) {
-    res.json(advertisers);
+  res.json(advertisers);
 });
 
 app.get('/advertisers/:id', function (req, res) {
@@ -20,5 +20,6 @@ app.get('/advertisers/:id', function (req, res) {
 
 var server = app.listen(8080, function () {
   var address = server.address();
-  console.log('Advertisers API app listening at http://%s:%s', address.address, address.port);
+  console.log('Advertisers API app listening at http://%s:%s',
+  	address.address, address.port);
 });

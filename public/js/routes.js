@@ -1,7 +1,7 @@
-(function(){
+(function () {
   'use strict';
 
-  app.config(function($routeProvider) {
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '/partials/home.html'
