@@ -26,13 +26,11 @@
           $log.error(err);
         });
 
-        $scope.save = function (isValid) {
-          if (isValid) {
-            AdvertiserService.save($scope.advertiser)
-              .then(function () {
-                $location.path('advertiser');
-              });
-          }
+        $scope.save = function () {
+          AdvertiserService.save($scope.advertiser)
+            .then(function () {
+              $location.path('advertiser');
+            });
         };
 
     }]);
