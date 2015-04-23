@@ -1,5 +1,4 @@
-var fs = require('fs'),
-  express = require('express'),
+var express = require('express'),
   app = express(),
   advertisers = require('./data/advertisers.js');
 
