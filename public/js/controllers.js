@@ -6,7 +6,7 @@
       $scope.advertisers = advertisers;
     }]);
 
-  app.controller('AdvertiserDetailsController', ['$scope', '$state', 'AdvertiserService', 'advertiser',
+  app.controller('AdvertiserEditController', ['$scope', '$state', 'AdvertiserService', 'advertiser',
     function AdvertiserDetailsController($scope, $state, AdvertiserService, advertiser) {
       $scope.advertiser = advertiser;
       $scope.save = function () {

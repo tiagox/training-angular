@@ -24,7 +24,7 @@
         .state('advertiserEdit', {
           url: '/advertiser/:id/edit',
           templateUrl : '/partials/advertiser_edit.html',
-          controller  : 'AdvertiserDetailsController',
+          controller  : 'AdvertiserEditController',
           resolve: {
             advertiser: ['AdvertiserService', '$stateParams',
               function (AdvertiserService, $stateParams) {
