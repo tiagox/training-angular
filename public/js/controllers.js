@@ -17,4 +17,14 @@
       };
     }]);
 
+  app.controller('AdvertiserDetailsController', ['$scope', 'advertiser',
+    function AdvertiserDetailsController($scope, advertiser) {
+      $scope.advertiser = advertiser;
+    }]);
+
+  app.controller('AdvertiserDetailsGeneralController', ['$scope', 'advertiser',
+    function AdvertiserDetailsGeneralController($scope, advertiser) {
+      $scope.advertiser = advertiser;
+    }]);
+
 }());

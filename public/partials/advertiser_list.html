@@ -15,7 +15,7 @@
         <th>Actions</th>
       </tr>
       <tr ng-repeat="advertiser in advertisers | filter:search" >
-        <td><a ui-sref="advertiserDetails({id: advertiser.id})">{{ advertiser.name }}</a></td>
+        <td><a ui-sref="advertiserDetails.general({id: advertiser.id})">{{ advertiser.name }}</a></td>
         <td>{{ advertiser.managedBy }}</td>
         <td>{{ advertiser.createdOn | date:'shortDate' }}</td>
         <td><a ui-sref="advertiserEdit({id: advertiser.id})" class="btn btn-primary btn-xs" role="button">Edit</a> </td>

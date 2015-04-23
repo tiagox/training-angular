@@ -34,7 +34,25 @@
         })
         .state('advertiserDetails', {
           url: '/advertiser/:id/details',
-          templateUrl: '/partials/advertiser_details.html'
+          abstract: true,
+          templateUrl: '/partials/advertiser_details.html',
+          controller: 'AdvertiserDetailsController',
+          resolve: {
+            advertiser: ['AdvertiserService', '$stateParams',
+              function (AdvertiserService, $stateParams) {
+                return AdvertiserService.get($stateParams.id);
+              }]
+          }
+        })
+        .state('advertiserDetails.general', {
+          url: '/general',
+          templateUrl: '/partials/advertiser_details_general.html',
+          controller  : 'AdvertiserDetailsGeneralController'
+        })
+        .state('advertiserDetails.settings', {
+          url: '/settings',
+          templateUrl : '/partials/advertiser_edit.html',
+          controller  : 'AdvertiserEditController'
         });
 
     }]);
