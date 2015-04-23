@@ -23,7 +23,7 @@
         })
         .state('advertiserEdit', {
           url: '/advertiser/:id/edit',
-          templateUrl : '/partials/advertiser_details.html',
+          templateUrl : '/partials/advertiser_edit.html',
           controller  : 'AdvertiserDetailsController',
           resolve: {
             advertiser: ['AdvertiserService', '$stateParams',
@@ -31,6 +31,10 @@
                 return AdvertiserService.get($stateParams.id);
               }]
           }
+        })
+        .state('advertiserDetails', {
+          url: '/advertiser/:id/details',
+          templateUrl: '/partials/advertiser_details.html'
         });
 
     }]);
