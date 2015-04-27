@@ -1,13 +1,13 @@
 (function () {
   'use strict';
 
-  app.controller('AdvertiserController', ['$scope', '$log', 'advertisers',
-    function AdvertiserController($scope, $log, advertisers) {
+  app.controller('AdvertiserCtrl', ['$scope', '$log', 'advertisers',
+    function AdvertiserCtrl($scope, $log, advertisers) {
       $scope.advertisers = advertisers;
     }]);
 
-  app.controller('AdvertiserEditController', ['$scope', '$state', 'AdvertiserService', 'advertiser',
-    function AdvertiserDetailsController($scope, $state, AdvertiserService, advertiser) {
+  app.controller('AdvertiserEditCtrl', ['$scope', '$state', 'AdvertiserService', 'advertiser',
+    function AdvertiserDetailsCtrl($scope, $state, AdvertiserService, advertiser) {
       $scope.advertiser = advertiser;
       $scope.save = function () {
         AdvertiserService.save($scope.advertiser)
@@ -17,13 +17,13 @@
       };
     }]);
 
-  app.controller('AdvertiserDetailsController', ['$scope', 'advertiser',
-    function AdvertiserDetailsController($scope, advertiser) {
+  app.controller('AdvertiserDetailsCtrl', ['$scope', 'advertiser',
+    function AdvertiserDetailsCtrl($scope, advertiser) {
       $scope.advertiser = advertiser;
     }]);
 
-  app.controller('AdvertiserDetailsGeneralController', ['$scope', 'advertiser',
-    function AdvertiserDetailsGeneralController($scope, advertiser) {
+  app.controller('AdvertiserDetailsGeneralCtrl', ['$scope', 'advertiser',
+    function AdvertiserDetailsGeneralCtrl($scope, advertiser) {
       $scope.advertiser = advertiser;
     }]);
 

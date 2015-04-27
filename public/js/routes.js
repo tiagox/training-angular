@@ -13,7 +13,7 @@
         .state('advertiser', {
           url: '/advertiser',
           templateUrl : '/partials/advertiser_list.html',
-          controller  : 'AdvertiserController',
+          controller  : 'AdvertiserCtrl',
           resolve: {
             advertisers: ['AdvertiserService',
               function (AdvertiserService) {
@@ -24,7 +24,7 @@
         .state('advertiserEdit', {
           url: '/advertiser/:id/edit',
           templateUrl : '/partials/advertiser_edit.html',
-          controller  : 'AdvertiserEditController',
+          controller  : 'AdvertiserEditCtrl',
           resolve: {
             advertiser: ['AdvertiserService', '$stateParams',
               function (AdvertiserService, $stateParams) {
@@ -36,7 +36,7 @@
           url: '/advertiser/:id/details',
           abstract: true,
           templateUrl: '/partials/advertiser_details.html',
-          controller: 'AdvertiserDetailsController',
+          controller: 'AdvertiserDetailsCtrl',
           resolve: {
             advertiser: ['AdvertiserService', '$stateParams',
               function (AdvertiserService, $stateParams) {
@@ -47,12 +47,12 @@
         .state('advertiserDetails.general', {
           url: '/general',
           templateUrl: '/partials/advertiser_details_general.html',
-          controller  : 'AdvertiserDetailsGeneralController'
+          controller  : 'AdvertiserDetailsGeneralCtrl'
         })
         .state('advertiserDetails.settings', {
           url: '/settings',
           templateUrl : '/partials/advertiser_edit.html',
-          controller  : 'AdvertiserEditController'
+          controller  : 'AdvertiserEditCtrl'
         });
 
     }]);
