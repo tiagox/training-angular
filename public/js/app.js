@@ -3,6 +3,6 @@ var app;
 (function () {
   'use strict';
 
-  app = angular.module('app', ['ui.router']);
+  app = angular.module('LFX', ['ui.router']);
 
 }());
